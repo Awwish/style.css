@@ -1,104 +1,158 @@
 /* ===== RESET ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
 }
 
 /* ===== BODY ===== */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f6f8;
-  color: #333;
-  line-height: 1.6;
+body{
+  background:#f4f6f8;
 }
 
 /* ===== HEADER ===== */
-header {
-  background: #0a58ca;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+header{
+  background:#004d4d;
+  color:#fff;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-header h1 {
-  margin-bottom: 10px;
+/* ===== NAV ===== */
+nav{
+  background:#003333;
+  display:flex;
+  justify-content:center;
 }
-
-header p {
-  font-size: 18px;
-}
-
-/* ===== NAVIGATION ===== */
-nav {
-  background: #083d99;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  color: #fff;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* ===== MAIN CONTENT ===== */
-.container {
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
+nav a{
+  color:#fff;
+  padding:15px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
 /* ===== SECTIONS ===== */
-section {
-  margin-bottom: 30px;
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:25px;
+}
+.post{
+  background:#fff;
+  padding:15px;
+  border-radius:6px;
+  margin:20px 0;
+}
+.post img, video{
+  max-width:100%;
+  border-radius:6px;
+  margin-top:10px;
 }
 
-section h2 {
-  color: #0a58ca;
-  margin-bottom: 10px;
+/* ===== ACTIONS ===== */
+.actions{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+}
+.comment{
+  background:#eee;
+  padding:6px;
+  border-radius:4px;
+  margin-top:5px;
+}
+input, textarea{
+  width:100%;
+  padding:6px;
+  margin:5px 0;
+}
+button{
+  padding:6px 12px;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+}
+.like{
+  background:#0066cc;
+  color:#fff;
+}
+.share{
+  background:#009688;
+  color:#fff;
 }
 
-/* ===== BUTTON ===== */
-button, .btn {
-  background: #0a58ca;
-  color: #fff;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
+/* ===== DASHBOARD ===== */
+.dashboard{
+  display:none;
 }
 
-button:hover, .btn:hover {
-  background: #083d99;
+/* ===== THREE DOT MENU ===== */
+.menu{
+  position:relative;
+}
+.dots{
+  font-size:22px;
+  cursor:pointer;
+}
+.dropdown{
+  display:none;
+  position:absolute;
+  right:0;
+  top:30px;
+  background:#fff;
+  border-radius:4px;
+  box-shadow:0 0 5px #0003;
+}
+.dropdown a{
+  display:block;
+  padding:10px;
+  color:#000;
+  text-decoration:none;
+}
+.dropdown a:hover{
+  background:#eee;
 }
 
-/* ===== FOOTER ===== */
-footer {
-  background: #0a58ca;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+/* ===== MODAL ===== */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.7);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.box{
+  background:#fff;
+  padding:20px;
+  width:320px;
+  border-radius:6px;
+}
+
+/* ===== SETTINGS ===== */
+.profile-pic{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  object-fit:cover;
+}
+.notify{
+  background:#fff;
+  padding:8px;
+  margin:6px 0;
+  border-left:4px solid #009688;
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  nav a {
-    display: block;
-    margin: 10px 0;
+@media (max-width:768px){
+  nav{
+    flex-direction:column;
   }
-
-  header h1 {
-    font-size: 24px;
+  header{
+    flex-direction:column;
+    gap:10px;
   }
 }
